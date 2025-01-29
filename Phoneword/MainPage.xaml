@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Phoneword.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            BackgroundColor="AliceBlue">
+            <Image
+                Source="kitten.jpg"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            
+            <Label
+                Text="{Binding UserName, StringFormat='Hello, {0}'}"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center"
+                WidthRequest="140"/>
+
+            <Label
+                Text="Email"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+            <Entry
+                IsTextPredictionEnabled="True"
+                Placeholder="Please enter your email"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+            <Label
+                Text="Password"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+            <Entry
+                Placeholder="Please enter your password"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+            <Button
+                Text="Submmit"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
